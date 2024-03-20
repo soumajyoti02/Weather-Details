@@ -48,24 +48,26 @@ function App() {
 
 	return (
 		<>
-			<Navbar />
+			<div className="min-h-screen">
+				<Navbar />
 
-			<div className="h-fit m-auto w-11/12 md:w-[80%] mt-10 mb:10 md:flex md:justify-between md:items-center md:h-[60vh] md:mt-16">
-				<div className='md:w-1/2 md:h-full md:flex md:flex-col md:justify-center'>
-					<label className="form-control w-full">
-						<div className="label">
-							<span className="label-text">Type Your City Name</span>
+				<div className="h-fit min-h-[70vh] m-auto w-11/12 md:w-[80%] mt-10 mb:10 md:flex md:justify-between md:items-center md:min-h-[64vh] md:mt-16">
+					<div className='md:w-1/2 md:h-full md:flex md:flex-col md:justify-center'>
+						<label className="form-control w-full">
+							<div className="label">
+								<span className="label-text">Type Your City Name</span>
+							</div>
+							<input onChange={handleChange} value={city} name='city' type="text" placeholder="Type here" className="input input-bordered w-full input-secondary" />
+						</label>
+						<div className="flex justify-center items-center mt-6">
+							<button onClick={fetchData} className="btn btn-outline btn-secondary btn-sm text-yellow-100 font-bold">Get Weather</button>
 						</div>
-						<input onChange={handleChange} value={city} name='city' type="text" placeholder="Type here" className="input input-bordered w-full input-secondary" />
-					</label>
-					<div className="flex justify-center items-center mt-6">
-						<button onClick={fetchData} className="btn btn-outline btn-secondary btn-sm text-yellow-100 font-bold">Get Weather</button>
 					</div>
+					{url && <Card url={url} place={city} weather={weather} />}
 				</div>
-				{url && <Card url={url} place={city} weather={weather} />}
-			</div>
 
-			<Footer />
+				<Footer />
+			</div>
 		</>
 	)
 }
