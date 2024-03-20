@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Card from './components/Card'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -49,7 +50,7 @@ function App() {
 		<>
 			<Navbar />
 
-			<div className="inputs m-auto w-11/12 md:w-[80%] mt-10 md:flex md:justify-between md:items-center md:h-[60vh] md:mt-20">
+			<div className="inputs m-auto w-11/12 md:w-[80%] mt-10 mb:10 md:flex md:justify-between md:items-center md:h-[60vh] md:mt-16">
 				<div className='md:w-1/2 md:h-full md:flex md:flex-col md:justify-center'>
 					<label className="form-control w-full">
 						<div className="label">
@@ -58,11 +59,13 @@ function App() {
 						<input onChange={handleChange} value={city} name='city' type="text" placeholder="Type here" className="input input-bordered w-full input-secondary" />
 					</label>
 					<div className="flex justify-center items-center mt-6">
-						<button onClick={fetchData} className="btn btn-active btn-secondary btn-sm text-yellow-100 font-bold">Get Weather</button>
+						<button onClick={fetchData} className="btn btn-outline btn-secondary  btn-secondary btn-sm text-yellow-100 font-bold">Get Weather</button>
 					</div>
 				</div>
 				{url && <Card url={url} place={city} weather={weather} />}
 			</div>
+
+			<Footer />
 		</>
 	)
 }

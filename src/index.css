@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.glowing-effect {
+    box-shadow: 0 0 1px rgb(6, 107, 91), 0 0 40px rgb(0, 54, 129), 0 0 5px rgb(0,
+            54,
+            129), 0 0 5px rgb(0,
+            54,
+            129);
+}
