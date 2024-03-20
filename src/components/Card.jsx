@@ -4,7 +4,7 @@ const Card = ({ url, place, weather }) => {
     const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
     return (
         <>
-            <div className="card w-11/12 h-[23rem] bg-base-100 shadow-xl m-auto mt-10 md:w-1/2 md:h-full md:ml-28">
+            <div className=" w-11/12  bg-base-100 shadow-xl m-auto mt-10 md:w-1/2 md:h-full md:ml-28">
                 <figure><img src={url} alt={place} className='rounded-lg' /></figure>
                 <div className="card-body">
                     <h2 className="card-title font-semibold text-xl">{place}</h2>

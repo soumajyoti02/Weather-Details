@@ -59,7 +59,7 @@ function App() {
 						<input onChange={handleChange} value={city} name='city' type="text" placeholder="Type here" className="input input-bordered w-full input-secondary" />
 					</label>
 					<div className="flex justify-center items-center mt-6">
-						<button onClick={fetchData} className="btn btn-outline btn-secondary  btn-secondary btn-sm text-yellow-100 font-bold">Get Weather</button>
+						<button onClick={fetchData} className="btn btn-outline btn-secondary btn-sm text-yellow-100 font-bold">Get Weather</button>
 					</div>
 				</div>
 				{url && <Card url={url} place={city} weather={weather} />}
