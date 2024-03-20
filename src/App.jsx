@@ -50,7 +50,7 @@ function App() {
 		<>
 			<Navbar />
 
-			<div className="inputs m-auto w-11/12 md:w-[80%] mt-10 mb:10 md:flex md:justify-between md:items-center md:h-[60vh] md:mt-16">
+			<div className="h-fit m-auto w-11/12 md:w-[80%] mt-10 mb:10 md:flex md:justify-between md:items-center md:h-[60vh] md:mt-16">
 				<div className='md:w-1/2 md:h-full md:flex md:flex-col md:justify-center'>
 					<label className="form-control w-full">
 						<div className="label">
